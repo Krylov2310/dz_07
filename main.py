@@ -48,7 +48,7 @@ class HashTable:
         self.table[index] = (key, value)
         self.count += 1
         # Проверяем коэффициент заполнения
-        if self.count >= self.size * 0.7:  # 70% заполнения
+        if self.count > self.size * 0.7:  # 70% заполнения
             self.resize()
 
     def search(self, key):
